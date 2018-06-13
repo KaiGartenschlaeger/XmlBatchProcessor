@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Batch Directory="E:\Projects\Projects\BatchProcessor\BatchProcessor\bin\Debug">
+
+  <FileSet Name="Files" Path="." Pattern="*.*" />
+
+  <ForEach Value="File" In="Files">
+    <Message Text="{File}" />
+    <RemoveFileAttribute Attribute="ReadOnly" Path="{File}" />
+    <RemoveFileAttribute Attribute="Hidden" Path="{File}" />
+  </ForEach>
+
+  <!--<RunProcess Path="{WindowPath}\notepad.exe" Arguments="{WindowPath}\win.ini" />-->
+
+  <!--<Value Name="State" Value="Starting" />
+
+  <Value Name="State" Value="CreatingZipFile" />
+  <Message Text="{State}" />
+
+  <Message Text="Das Windows Verzeichnis ist {WindowPath}" />
+
+  <RemoveFileAttribute Attribute="ReadOnly" />
+  
+  <CreateZIP Path="./Test.zip">
+    <AddFile Path="./BatchProcessor.exe" />
+  </CreateZIP>
+
+  <Loop Value="i" From="1" To="5" Step="1">
+    <Message Text="{i}" />
+  </Loop>
+
+  <Message Text="{i}" />
+
+  <FileSet Name="ZipFiles" Path="." Pattern="*.zip" />
+  <ForEach Value="File" In="ZipFiles">
+    <Message Text="{File}" />
+  </ForEach>
+
+  <Value Name="Number" Value="1" />
+  <Increment Name="Number" Number="1" />
+  <Increment Name="Number" Number="3" />
+  <Decrement Name="Number" Number="10" />
+  <Message Text="Die Zahl hat jetzt den Wert {Number}" />
+
+  <CreateDirectory Path="./Test" />
+  <CopyFile SourcePath="./Test.zip" DestinationPath="./Test/test.zip" />
+  <DeleteDirectory Path="./Test" />
+
+  <DeleteFile Path="./Test.xml" />
+
+  <CopyFile SourcePath="./Test.zip" DestinationPath="./Test.Copy.zip" />
+  <MoveFile SourcePath="./Test.zip" DestinationPath="./Test.bak.zip" />
+
+  <RunProcess Path="explorer.exe" Arguments="{ProjectPath}" />-->
+
+</Batch>
